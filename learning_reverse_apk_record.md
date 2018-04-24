@@ -7,7 +7,8 @@
 1.了解APK建立流程
 2.實作Reverse apk
 
-![apktool-repackage](https://github.com/parkmftsai/Reverse-apk-research/blob/master/Image/build.png)
 
 參考範例 https://github.com/18z/apk-re-forfun/blob/master/02/apktool.md
 ```
+
+![apktool-repackage](https://github.com/parkmftsai/Reverse-apk-research/blob/master/Image/build.png)
