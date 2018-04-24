@@ -6,5 +6,8 @@
 今天開始接觸人生第一次的apk逆向工程,最主要流程如下
 1.了解APK建立流程
 2.實作Reverse apk
+
+![apktool-repackage](https://github.com/parkmftsai/Reverse-apk-research/blob/master/Image/build.png)
+
 參考範例 https://github.com/18z/apk-re-forfun/blob/master/02/apktool.md
 ```
