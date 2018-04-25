@@ -20,5 +20,32 @@ https://github.com/18z/apk-re-forfun/blob/master/02/apktool.md
 
 ![apktool-repackage](https://github.com/parkmftsai/Reverse-apk-research/blob/master/Image/build.png)
 <br >
-好吧,不多說先來實做
 
+
+```
+20180425
+Frida 研究 
+1.PC上Frida環境建立
+可參考這篇https://www.codemetrix.net/hacking-android-apps-with-frida-1/
+
+2.android模擬器環境（genymotion）
+  這有點麻煩,搞了有點久,尤其是裝完android之後透過frida下以下指令時
+  會出現
+  List of devices attached
+  adb server is out of date.  killing...
+  cannot bind 'tcp:5037': Address already in use
+  ADB server didn't ACK
+  會讓人有點生氣╰（‵□′）╯
+  一開始以為是有某個process佔了port 5037,殺了一堆process之後還是給你繼續連
+  後來看到底下這篇
+  https://blog.csdn.net/hai29785/article/details/52370106
+  原來genymotion與pc不是用同一個sdk中的adb,所以某個adb剛好佔住port 5037
+  所以只要把genymotion的adb路徑改成跟PC一樣就行囉^_^
+  yed:
+     frida hook實作一遍
+  
+
+
+
+
+```
