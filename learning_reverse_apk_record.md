@@ -47,7 +47,7 @@ Frida 研究
 ```
 20180426
 1.Frida hook 研究 
-Frida hook的對象只要以process,原理在於將javascript code inject to any process
+Frida hook的對象主要以process,原理在於將javascript code inject to any process
 相關範例在20180426research資料夾內
 Question: 
  如果要植入code,為何植入的是javascript code,python 不能？
