@@ -54,7 +54,7 @@ Question:
 
 可參考https://www.frida.re/docs/javascript-api/
   yed:
-     frida hook what android emulator 實作一遍
+     frida hook what process in android emulator 實作一遍
   
 
 
