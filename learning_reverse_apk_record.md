@@ -43,9 +43,22 @@ Frida 研究
   所以只要把genymotion的adb路徑改成跟PC一樣就行囉^_^
   yed:
      frida hook實作一遍
+```
+```
+20180426
+Frida hook 研究 
+1.PC上Frida hook研究
+Frida hook的對象只要以process,原理在於將javascript code inject to process
+Question: 
+ 如果要植入code,為何植入的是javascript code,python 不能？
+
+可參考https://www.frida.re/docs/javascript-api/
+  yed:
+     frida hook實作一遍
   
 
 
 
 
 ```
+
