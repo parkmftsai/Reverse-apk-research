@@ -41,6 +41,10 @@ Frida 研究
   https://blog.csdn.net/hai29785/article/details/52370106
   原來genymotion與pc不是用同一個sdk中的adb,所以某個adb剛好佔住port 5037
   所以只要把genymotion的adb路徑改成跟PC一樣就行囉^_^
+  
+  在此附上frida-server網址
+  https://github.com/frida/frida/releases
+  須注意pc上的frida版本與frida-server版本須一致
   yed:
      frida hook實作一遍
 ```
