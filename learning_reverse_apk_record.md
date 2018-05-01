@@ -38,6 +38,8 @@ Frida 研究
   會讓人有點生氣╰（‵□′）╯
   一開始以為是有某個process佔了port 5037,殺了一堆process之後還是給你繼續連
   後來看到底下這篇
+  
+  
   https://blog.csdn.net/hai29785/article/details/52370106
   原來genymotion與pc不是用同一個sdk中的adb,所以某個adb剛好佔住port 5037
   所以只要把genymotion的adb路徑改成跟PC一樣就行囉^_^
@@ -65,4 +67,18 @@ Question:
 
 
 ```
+```
+20180427~20180501
 
+這陣子在看frida javascript api的使用
+官方的介紹有點含糊,看起來與操作起來還是似懂非懂
+
+官方網頁:https://www.frida.re/docs/javascript-api/
+,但是這個新發現網頁給的範例似乎有一個脈落可尋,或許可以幫助我更了解frida的作用
+http://ahageek.com/blog/wooyun_articles/Frida-%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%B3%A8%E5%85%A5%E5%B7%A5%E5%85%B7%E5%9F%BA%E7%A1%80%E7%AF%87.html
+
+
+yed:
+     參考並實做一遍上述網頁範例
+
+```
