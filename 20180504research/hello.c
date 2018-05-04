@@ -3,8 +3,8 @@
 int print(int n,char* s)
 {
 printf ("number is %d\n", n);
-
-printf ("string is %s\n", s);
+if(n==10000)
+  printf ("string is %s\n", s);
 return 0;
 }
 
