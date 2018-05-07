@@ -111,3 +111,41 @@ yed:
      驗證這個假設
 
 ```
+```
+5/7
+今天首先要驗證兩個問題
+1.hook一個process,其數值的確改變,但位址是否也是process的function address?
+2.透過frida-trace android apk後，會產生以下這種狀況
+ frida-trace -i "open" -U xxxxx 
+ open(pathname="/data/app/com.example.ttc.myapplication-2/base.apk", flags=0x0)
+ open(pathname="/data/app/com.example.ttc.myapplication-2/oat/x86/base.art", flags=0x0)
+ open(pathname="/data/app/com.example.ttc.myapplication-2/base.apk", flags=0x0)
+ 我們可以發現，使用 frida-trace -i "open" -U 會產生base.apk，這個apk是從你hook的那個apk,透過frida-trace -i "open" -U
+ 產生的
+ 問題點在於base.apk是否會與之前hook的那隻apk一樣？ 如果不一樣又是哪邊不一樣？
+ 
+ 先回答第一個問題
+ 我們測試的code與20180504research相似
+ 只是我們把
+ printf ("number is %d\n",n);
+ 改成
+ printf ("number is %p\n", &n);
+ 以方便看address變化
+ 執行程式之後
+ n的位址為0x7fff81af929c
+ hook後n的位址為0x7f9349ffa33c
+ 很明顯看出，hook做的動作應是先複製一份process 裡頭指定的function,然後在執行時，把指標指向hook複製的function
+ 
+ 最後回答第二個問題
+ 首先我們先計算要丟進android模擬器執行的apk的 hash值，工具使用md5sum，這個android裡頭也有裝
+ 然後再計算base.py的hash值，也是使用md5sum
+ 然後比較一下兩者的hash值
+ xxx.apk的hash值 01a9ba0410a46dd590918d1724ab6387 
+ base.apk的hash值 01a9ba0410a46dd590918d1724ab6387 
+ 兩者數值相同，得證，兩個檔案都一樣
+ Question ： 多產生一份相同的apk意義何在？
+ 
+ yed: 驗證hook android是否也能像hook c語言寫的process那樣，用process裡的function
+ 怎麽做？ 語法表示？
+ 
+```
