@@ -149,3 +149,13 @@ yed:
  怎麽做？ 語法表示？
  
 ```
+```
+20180509
+為了學習如何分析malware apk，首先我需要一堆參考資料（如何攻擊？），最好是有那種很多不同的malware apk
+可以看，果不其然以下project給了我不少幫助
+https://github.com/parkmftsai/android-malware
+這位大大蒐集了多個不同攻擊手法的apk
+其中BreakBottleneck這個資料夾有一個Break Bottleneck.pdf可以看
+內容大概在敘述BreakBottleneck內的所有apk攻擊方式，大致上都是以欺騙為主的攻擊，講述的還算完整
+，也給了我一些不錯的思考方向，不過，我尚未看完＝＝
+```
