@@ -203,4 +203,9 @@ run("==MwbWJiQ0EBktx0MwZz")
 .
 這些是透過一個Function叫private static String run(String paramAnonymousString)進行解密的
 方法看起來是自己硬刻出來的，目的應是在於躲過靜態分析用，因為那些字串都是亂碼，然後解密的過程在記憶體裡頭操作，感覺與加殼有點類似。
+
+以下這篇有點意思，或許我可以改個程式碼，拿來監看某個東東XD
+https://4hou.win/wordpress/?p=16252
+
+yed 參考程式碼，看看能不能做個有趣的東西
 ```
