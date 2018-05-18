@@ -209,3 +209,14 @@ https://4hou.win/wordpress/?p=16252
 
 yed 參考程式碼，看看能不能做個有趣的東西
 ```
+```
+20180518
+看完https://4hou.win/wordpress/?p=16252這個網站，
+我們主要以LolliPin這個apk做測試，以下是LolliPin的open source網址
+https://github.com/omadahealth/LolliPin
+流程大概如下
+1.下載source 如果只有apk，就要先反編譯
+2.觀察source code流程，找function測試
+3.撰寫python腳本，根據上述流程，撰寫javascript
+4.執行python腳本
+```
